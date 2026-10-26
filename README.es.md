@@ -32,7 +32,7 @@
 <p align="center"><img src="assets/readme/divider.svg" alt="" width="80%" /></p>
 
 <a id="-por-qué-cambiar"></a>
-<p align="center"><img src="assets/readme/sections/es-01.svg" alt="01 · Por qué cambiar?" width="100%" /></p>
+<p align="center"><img src="assets/readme/sections/es-01.svg" alt="01 · ¿Por qué cambiar?" width="100%" /></p>
 
 | | no-ai-coauthor | RepoRinse |
 |---|:---:|:---:|
