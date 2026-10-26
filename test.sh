@@ -32,6 +32,16 @@ Co-authored-by: Ana <ana@example.com>"
 
 check "docs: mention Claude in the README" "docs: mention Claude in the README"
 
+check "fix: strip the \"🤖 Generated with Claude Code\" line
+
+The line \"Generated with [Claude Code](...)\" stayed.
+
+Generated with Claude Code.
+
+Co-Authored-By: Claude <noreply@anthropic.com>" "fix: strip the \"🤖 Generated with Claude Code\" line
+
+The line \"Generated with [Claude Code](...)\" stayed."
+
 "$here/install.sh" --uninstall --repo "$tmp" > /dev/null
 [ ! -f "$tmp/.git/hooks/commit-msg" ] && echo "ok   - uninstall" || { echo "FAIL - uninstall"; fail=1; }
 exit $fail
