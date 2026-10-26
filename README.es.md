@@ -1,15 +1,24 @@
 <div align="center">
 
-# ✂️ no-ai-coauthor
+# ✂️ no-ai-coauthor → 🧼 RepoRinse
 
-**Tus commits, tu nombre.**<br>
-Un hook de Git diminuto que quita la atribución a la IA de cada mensaje de commit —<br>
-Claude Code, Copilot, Codex, Cursor, Gemini o cualquier otro agente.
+> [!IMPORTANT]
+> **Este proyecto se mudó.** no-ai-coauthor ya no recibe mantenimiento.
+> Su sucesor es **[RepoRinse](https://github.com/robgallardof/RepoRinse)** — el mismo objetivo, más seguro y mucho más completo.
 
-![git hook](https://img.shields.io/badge/git-hook%20commit--msg-F05032?logo=git&logoColor=white)
-![shell](https://img.shields.io/badge/POSIX-sh-4EAA25?logo=gnubash&logoColor=white)
-![plataformas](https://img.shields.io/badge/macOS%20%7C%20Linux%20%7C%20Windows-compatible-0078D4)
-![dependencias](https://img.shields.io/badge/dependencias-cero-2ea44f)
+<a href="https://github.com/robgallardof/RepoRinse">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://socialify.git.ci/robgallardof/RepoRinse/image?theme=Dark&font=Inter&language=1&description=1&name=1&owner=1&pattern=Circuit%20Board" />
+    <img src="https://socialify.git.ci/robgallardof/RepoRinse/image?theme=Light&font=Inter&language=1&description=1&name=1&owner=1&pattern=Circuit%20Board" alt="RepoRinse" width="80%" />
+  </picture>
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/robgallardof/RepoRinse/blob/main/README.es.md"><img src="https://img.shields.io/badge/Ir%20a-RepoRinse-6D28D9?style=for-the-badge&logo=github&logoColor=white" alt="Ir a RepoRinse" /></a>
+<a href="https://github.com/robgallardof/RepoRinse/blob/main/docs/migration/no-ai-couathor.md#español"><img src="https://img.shields.io/badge/Gu%C3%ADa-de%20migraci%C3%B3n-0EA5E9?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Guía de migración" /></a>
+
+![estado](https://img.shields.io/badge/estado-obsoleto-lightgrey)
 ![licencia](https://img.shields.io/badge/licencia-MIT-blue)
 
 [English](README.md) · **Español**
@@ -18,150 +27,77 @@ Claude Code, Copilot, Codex, Cursor, Gemini o cualquier otro agente.
 
 ---
 
-## ✨ Qué hace
+## 🤔 ¿Por qué cambiar?
 
-Los agentes de IA para programar suelen firmar tus commits. Este hook se ejecuta justo antes de que Git guarde el
-mensaje y quita esas líneas en silencio, para que el historial solo muestre a las personas dueñas del trabajo.
+| | no-ai-coauthor | RepoRinse |
+|---|:---:|:---:|
+| Quita trailers `Co-Authored-By` de IA y pies "Generated with" | ✅ | ✅ |
+| Respeta coautores humanos — incluso personas llamadas *Claude* | ⚠️ regex | ✅ |
+| Convive con Husky / pre-commit / lefthook (encadena hooks existentes) | ❌ | ✅ |
+| Nunca reemplaza tu `core.hooksPath` global | ❌ | ✅ |
+| Desinstalación byte por byte con manifest | ❌ | ✅ |
+| Configurable (`.reporinse.toml`) y `--dry-run` en todo | ❌ | ✅ |
+| Revisión de espacios, Unicode invisible y tamaño de cambios | ❌ | ✅ |
+| Límites para Claude Code, Codex, Gemini CLI y Cursor | ❌ | ✅ |
 
-<table>
-<tr><th>Antes</th><th>Después</th></tr>
-<tr><td>
+## 🚀 Cámbiate en 3 pasos
 
-```text
-feat: login con enlace mágico
-
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
-
-Co-Authored-By: Claude <noreply@anthropic.com>
-```
-
-</td><td>
-
-```text
-feat: login con enlace mágico
-```
-
-</td></tr>
-</table>
-
-| | |
-|---|---|
-| 🧹 **Quita** | Los trailers `Co-Authored-By:` que mencionan a **Claude, Anthropic, OpenAI, ChatGPT, Codex, Gemini, Copilot o Cursor**, y las líneas `Generated with Claude Code` (con o sin el 🤖). |
-| 🤝 **Respeta** | Los coautores humanos, el resto de tu mensaje y cualquier commit que solo *menciona* esos nombres en el texto. |
-| 🧽 **Limpia** | Las líneas en blanco que quedan al final. |
-| 🌍 **Sirve con cualquier agente** | Es un hook de Git normal: no importa qué herramienta hizo el commit. |
-| 🪶 **Cero dependencias** | ~10 líneas de `sh` POSIX + `grep` + `awk`, que vienen con Git en todos lados (incluido Git for Windows). |
-
-## 🚀 Instalación
+**1. Quita el hook anterior** (desde tu clon de este repositorio):
 
 ```sh
-git clone https://github.com/robgallardof/no-ai-couathor.git
-cd no-ai-couathor
-```
-
-### Opción A — en todos los repositorios de tu equipo (recomendada)
-
-<details open>
-<summary><b>macOS / Linux / Git Bash</b></summary>
-
-```sh
-./install.sh
-```
-
-</details>
-
-<details open>
-<summary><b>Windows (PowerShell)</b></summary>
-
-```powershell
-.\install.ps1
-```
-
-> Si los scripts están bloqueados: `powershell -ExecutionPolicy Bypass -File .\install.ps1`
-
-</details>
-
-Copia el hook a `~/.config/git/hooks/` y apunta ahí el `core.hooksPath` global de Git.
-
-> [!NOTE]
-> Un `core.hooksPath` global hace que Git ignore los hooks de `.git/hooks/` de cada repositorio. Si un proyecto usa
-> sus propios hooks (husky, pre-commit, lefthook…), usa la **Opción B** en ese proyecto. Los repositorios que definen
-> su propio `core.hooksPath` siguen usándolo.
-
-### Opción B — un solo repositorio
-
-```sh
-./install.sh --repo /ruta/a/tu/repo
-```
-```powershell
-.\install.ps1 -Repo C:\ruta\a\tu\repo
-```
-
-Si el repositorio ya tenía un hook `commit-msg`, se guarda como `commit-msg.bak`.
-
-### Opción C — incluirlo dentro de un proyecto
-
-Copia `hooks/commit-msg` al proyecto como `.githooks/commit-msg`, súbelo y pide a cada clon que lo active una vez:
-
-```sh
-git config core.hooksPath .githooks
-```
-
-## ✅ Comprueba que funciona
-
-```sh
-git commit --allow-empty -m "prueba" -m "Co-Authored-By: Claude <noreply@anthropic.com>"
-git log -1 --format=%B      # → solo "prueba"
-git reset --soft HEAD~1     # deshace el commit de prueba
-```
-
-O corre las pruebas incluidas: `./test.sh`
-
-## 🗑️ Desinstalar
-
-```sh
-./install.sh --uninstall                # global
-./install.sh --uninstall --repo RUTA    # un repositorio
+./install.sh --uninstall                 # instalación global
+./install.sh --uninstall --repo RUTA     # instalación por repositorio
 ```
 ```powershell
 .\install.ps1 -Uninstall
 .\install.ps1 -Uninstall -Repo RUTA
 ```
 
-Solo borra el hook si es el nuestro, y restaura el `commit-msg.bak` si existe.
+**2. Instala RepoRinse** — sigue su [guía de instalación](https://github.com/robgallardof/RepoRinse/blob/main/README.es.md#-instalación).
 
-## 💡 Tip: apágalo también desde el origen
+**3. Instala el hook que lo reemplaza:**
 
-Claude Code puede omitir la atribución por sí mismo. En `~/.claude/settings.json`:
-
-```json
-{
-  "attribution": { "commit": "", "pr": "" }
-}
+```sh
+reporinse install --provider git --only git.ai-attribution --yes                 # un repositorio
+reporinse install --provider git --scope user --only git.ai-attribution --yes    # todos los repositorios
 ```
 
-(versiones anteriores: `"includeCoAuthoredBy": false`). El hook sigue valiendo la pena: cubre a todos los agentes y
-cualquier configuración que se te olvide; las descripciones de pull requests no pasan por Git de todos modos.
+¿Aún no quieres quitar el hook anterior? Una instalación de RepoRinse por repositorio lo mantiene funcionando: se
+encadena y corre primero. Todos los detalles, incluido qué es automático y qué es manual, están en la
+**[guía de migración](https://github.com/robgallardof/RepoRinse/blob/main/docs/migration/no-ai-couathor.md#español)**.
 
-## ❓ Preguntas frecuentes
-
-<details>
-<summary><b>¿Modifica los commits que ya están en el historial?</b></summary>
-
-No. Solo limpia los commits nuevos (incluidos `--amend`, merges y rebases que generan mensaje). Para reescribir
-historial viejo usa `git rebase -i` o `git filter-repo`.
-</details>
+---
 
 <details>
-<summary><b>¿Se puede saltar?</b></summary>
+<summary><b>📦 Documentación anterior (no-ai-coauthor)</b></summary>
 
-Sí, como cualquier hook local: `git commit --no-verify` no lo ejecuta. Los agentes normalmente no usan esa opción.
-</details>
+### Qué hacía
 
-<details>
-<summary><b>¿Cómo agrego otra herramienta a la lista?</b></summary>
+Un pequeño hook `commit-msg` en POSIX `sh` que quitaba los trailers `Co-Authored-By:` que mencionaban a Claude,
+Anthropic, OpenAI, ChatGPT, Codex, Gemini, Copilot o Cursor, y las líneas `Generated with Claude Code`.
 
-Edita el patrón en `hooks/commit-msg` — los nombres están en `(claude|anthropic|openai|…)` — y vuelve a instalar.
+### Instalar (no recomendado — usa RepoRinse)
+
+```sh
+git clone https://github.com/robgallardof/no-ai-couathor.git
+cd no-ai-couathor
+./install.sh                    # global (configura core.hooksPath en ~/.config/git/hooks)
+./install.sh --repo RUTA        # un solo repositorio
+```
+```powershell
+.\install.ps1
+.\install.ps1 -Repo C:\ruta\a\tu\repo
+```
+
+### Desinstalar
+
+```sh
+./install.sh --uninstall
+./install.sh --uninstall --repo RUTA
+```
+
+Solo quita el hook si es nuestro y restaura cualquier `commit-msg.bak`. Pruebas: `./test.sh`.
+
 </details>
 
 ## 📄 Licencia
