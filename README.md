@@ -1,6 +1,10 @@
 <div align="center">
 
-# ✂️ no-ai-coauthor → 🧼 RepoRinse
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/banner-en-dark.svg">
+  <img src="assets/readme/banner-en-light.svg" alt="no-ai-coauthor — This project moved to RepoRinse" width="100%">
+</picture>
+
 
 > [!IMPORTANT]
 > **This project has moved.** no-ai-coauthor is no longer maintained.
@@ -25,9 +29,10 @@
 
 </div>
 
----
+<p align="center"><img src="assets/readme/divider.svg" alt="" width="80%" /></p>
 
-## 🤔 Why move?
+<a id="-why-move"></a>
+<p align="center"><img src="assets/readme/sections/en-01.svg" alt="01 · Why move?" width="100%" /></p>
 
 | | no-ai-coauthor | RepoRinse |
 |---|:---:|:---:|
@@ -40,7 +45,8 @@
 | Whitespace, invisible Unicode and change-scope checks | ❌ | ✅ |
 | Guardrails for Claude Code, Codex, Gemini CLI and Cursor | ❌ | ✅ |
 
-## 🚀 Switch in 3 steps
+<a id="-switch-in-3-steps"></a>
+<p align="center"><img src="assets/readme/sections/en-02.svg" alt="02 · Switch in 3 steps" width="100%" /></p>
 
 **1. Remove the old hook** (from your clone of this repository):
 
@@ -66,7 +72,7 @@ Not ready to remove the old hook yet? A repo-scope RepoRinse install keeps it wo
 All the details, including what is automated and what is manual, are in the
 **[migration guide](https://github.com/robgallardof/RepoRinse/blob/main/docs/migration/no-ai-couathor.md)**.
 
----
+<p align="center"><img src="assets/readme/divider.svg" alt="" width="80%" /></p>
 
 <details>
 <summary><b>📦 Legacy documentation (no-ai-coauthor)</b></summary>
@@ -100,6 +106,11 @@ Only removes the hook if it is ours, and restores any `commit-msg.bak`. Tests: `
 
 </details>
 
-## 📄 License
+<a id="-license"></a>
+<p align="center"><img src="assets/readme/sections/en-03.svg" alt="03 · License" width="100%" /></p>
 
 [MIT](LICENSE)
+
+<br/>
+
+<img src="assets/readme/footer-en.svg" alt="no-ai-coauthor" width="100%" />

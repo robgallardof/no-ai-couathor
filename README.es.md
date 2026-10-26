@@ -1,6 +1,10 @@
 <div align="center">
 
-# ✂️ no-ai-coauthor → 🧼 RepoRinse
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/banner-es-dark.svg">
+  <img src="assets/readme/banner-es-light.svg" alt="no-ai-coauthor — Este proyecto se mudó a RepoRinse" width="100%">
+</picture>
+
 
 > [!IMPORTANT]
 > **Este proyecto se mudó.** no-ai-coauthor ya no recibe mantenimiento.
@@ -25,9 +29,10 @@
 
 </div>
 
----
+<p align="center"><img src="assets/readme/divider.svg" alt="" width="80%" /></p>
 
-## 🤔 ¿Por qué cambiar?
+<a id="-por-qué-cambiar"></a>
+<p align="center"><img src="assets/readme/sections/es-01.svg" alt="01 · Por qué cambiar?" width="100%" /></p>
 
 | | no-ai-coauthor | RepoRinse |
 |---|:---:|:---:|
@@ -40,7 +45,8 @@
 | Revisión de espacios, Unicode invisible y tamaño de cambios | ❌ | ✅ |
 | Límites para Claude Code, Codex, Gemini CLI y Cursor | ❌ | ✅ |
 
-## 🚀 Cámbiate en 3 pasos
+<a id="-cámbiate-en-3-pasos"></a>
+<p align="center"><img src="assets/readme/sections/es-02.svg" alt="02 · Cámbiate en 3 pasos" width="100%" /></p>
 
 **1. Quita el hook anterior** (desde tu clon de este repositorio):
 
@@ -66,7 +72,7 @@ reporinse install --provider git --scope user --only git.ai-attribution --yes   
 encadena y corre primero. Todos los detalles, incluido qué es automático y qué es manual, están en la
 **[guía de migración](https://github.com/robgallardof/RepoRinse/blob/main/docs/migration/no-ai-couathor.md#español)**.
 
----
+<p align="center"><img src="assets/readme/divider.svg" alt="" width="80%" /></p>
 
 <details>
 <summary><b>📦 Documentación anterior (no-ai-coauthor)</b></summary>
@@ -100,6 +106,11 @@ Solo quita el hook si es nuestro y restaura cualquier `commit-msg.bak`. Pruebas:
 
 </details>
 
-## 📄 Licencia
+<a id="-licencia"></a>
+<p align="center"><img src="assets/readme/sections/es-03.svg" alt="03 · Licencia" width="100%" /></p>
 
 [MIT](LICENSE)
+
+<br/>
+
+<img src="assets/readme/footer-es.svg" alt="no-ai-coauthor" width="100%" />
