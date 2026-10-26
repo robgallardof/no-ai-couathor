@@ -106,6 +106,19 @@ Solo quita el hook si es nuestro y restaura cualquier `commit-msg.bak`. Pruebas:
 
 </details>
 
+### Filtro de compatibilidad con Docker (opcional)
+
+Solo para flujos existentes; RepoRinse sigue siendo el reemplazo recomendado.
+El contenedor limpia un archivo de mensaje montado explícitamente y no instala hooks:
+
+```sh
+docker build -t no-ai-coauthor:local .
+docker run --rm --network none --user "$(id -u):$(id -g)" -v "$PWD:/repo" no-ai-coauthor:local .git/COMMIT_EDITMSG
+```
+
+Usuario de ejecución, Compose y límites: [guía de Docker](docs/DOCKER.md) (en inglés).
+Pruebas de imagen y Git aislado: `python scripts/test_docker.py`.
+
 <a id="-licencia"></a>
 <p align="center"><img src="assets/readme/sections/es-03.svg" alt="03 · Licencia" width="100%" /></p>
 

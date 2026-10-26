@@ -1,0 +1,8 @@
+**
+!LICENSE
+!install.sh
+!test.sh
+!hooks/
+!hooks/commit-msg
+!scripts/
+!scripts/docker-entrypoint.sh

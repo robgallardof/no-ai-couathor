@@ -106,6 +106,19 @@ Only removes the hook if it is ours, and restores any `commit-msg.bak`. Tests: `
 
 </details>
 
+### Optional Docker compatibility filter
+
+For existing legacy workflows only; RepoRinse remains the recommended replacement.
+The container filters an explicitly mounted message file and does not install hooks:
+
+```sh
+docker build -t no-ai-coauthor:local .
+docker run --rm --network none --user "$(id -u):$(id -g)" -v "$PWD:/repo" no-ai-coauthor:local .git/COMMIT_EDITMSG
+```
+
+Runtime UID, Compose and limitations: [Docker guide](docs/DOCKER.md).
+Real image and isolated Git-hook tests: `python scripts/test_docker.py`.
+
 <a id="-license"></a>
 <p align="center"><img src="assets/readme/sections/en-03.svg" alt="03 · License" width="100%" /></p>
 
