@@ -129,5 +129,5 @@ Real image and isolated Git-hook tests: `python scripts/test_docker.py`.
 <p align="center"><a href="#top">Back to top</a></p>
 
 <!-- readme-builder:signature:start -->
-<p align="center"><a href="https://github.com/robgallardof"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/brand/signature-en-dark.svg" /><img src="assets/readme/brand/signature-en-light.svg" alt="no-ai-coauthor / Roberto Gallardo" width="360" /></picture></a></p>
+<p align="center"><a href="https://github.com/robgallardof"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/brand/signature-en-dark.svg" /><img src="assets/readme/brand/signature-en-light.svg" alt="no-ai-coauthor / Roberto Gallardo" width="100%" /></picture></a></p>
 <!-- readme-builder:signature:end -->
