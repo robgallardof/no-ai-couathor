@@ -21,8 +21,8 @@
 
 <br/><br/>
 
-<a href="https://github.com/robgallardof/RepoRinse/blob/main/README.es.md"><img src="https://img.shields.io/badge/Ir%20a-RepoRinse-6D28D9?style=for-the-badge&logo=github&logoColor=white" alt="Ir a RepoRinse" /></a>
-<a href="https://github.com/robgallardof/RepoRinse/blob/main/docs/migration/no-ai-couathor.md#español"><img src="https://img.shields.io/badge/Gu%C3%ADa-de%20migraci%C3%B3n-0EA5E9?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Guía de migración" /></a>
+<a href="https://github.com/robgallardof/RepoRinse/blob/main/README.es.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/btn-ir-a-reporinse-primary-dark.svg" /><img src="assets/readme-builder/kit/btn-ir-a-reporinse-primary-light.svg" alt="Ir a RepoRinse" height="44" /></picture></a>
+<a href="https://github.com/robgallardof/RepoRinse/blob/main/docs/migration/no-ai-couathor.md#español"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/btn-guia-de-migracion-primary-dark.svg" /><img src="assets/readme-builder/kit/btn-guia-de-migracion-primary-light.svg" alt="Guía de migración" height="44" /></picture></a>
 
 ![estado](https://img.shields.io/badge/estado-obsoleto-lightgrey)
 ![licencia](https://img.shields.io/badge/licencia-MIT-blue)
@@ -46,6 +46,8 @@ OpenCode y DeepSeek también pueden usar el hook de Git. Para guardas antes de e
 | Configurable (`.reporinse.toml`) y `--dry-run` en todo | <img src="assets/readme-builder/icons/close.svg" width="20" height="20" alt="" /> | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> |
 | Revisión de espacios, Unicode invisible y tamaño de cambios | <img src="assets/readme-builder/icons/close.svg" width="20" height="20" alt="" /> | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> |
 | Límites para Claude Code, Codex, Gemini CLI y Cursor | <img src="assets/readme-builder/icons/close.svg" width="20" height="20" alt="" /> | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> |
+
+<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
 
 <a id="-cámbiate-en-3-pasos"></a>
 ## <img src="assets/readme-builder/icons/layers.svg" width="24" height="24" alt="" /> Cámbiate en 3 pasos
@@ -119,6 +121,8 @@ docker run --rm --network none --user "$(id -u):$(id -g)" -v "$PWD:/repo" no-ai-
 Usuario de ejecución, Compose y límites: [guía de Docker](docs/DOCKER.md) (en inglés).
 Pruebas de imagen y Git aislado: `python scripts/test_docker.py`.
 
+<p align="center"><img src="assets/readme-builder/kit/wave.svg" alt="" width="100%" /></p>
+
 <a id="-licencia"></a>
 ## <img src="assets/readme-builder/icons/code.svg" width="24" height="24" alt="" /> Licencia
 
@@ -126,7 +130,7 @@ Pruebas de imagen y Git aislado: `python scripts/test_docker.py`.
 
 <br/>
 
-<p align="center"><a href="#top">Volver al inicio</a></p>
+<p align="center"><a href="#top"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme-builder/kit/btn-volver-al-inicio-outline-sm-dark.svg" /><img src="assets/readme-builder/kit/btn-volver-al-inicio-outline-sm-light.svg" alt="Volver al inicio" height="34" /></picture></a></p>
 
 <!-- readme-builder:signature:start -->
 <p align="center"><a href="https://github.com/robgallardof"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/brand/signature-es-dark.svg" /><img src="assets/readme/brand/signature-es-light.svg" alt="no-ai-coauthor / Roberto Gallardo" width="100%" /></picture></a></p>
