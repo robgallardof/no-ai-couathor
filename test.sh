@@ -42,6 +42,23 @@ Co-Authored-By: Claude <noreply@anthropic.com>" "fix: strip the \"🤖 Generated
 
 The line \"Generated with [Claude Code](...)\" stayed."
 
+for agent in OpenCode DeepSeek "DeepSeek Harness"; do
+  check "feat: agent support
+
+Generated with $agent
+
+Co-Authored-By: $agent <agent@example.invalid>
+Co-Authored-By: Ana <ana@example.invalid>" "feat: agent support
+
+Co-Authored-By: Ana <ana@example.invalid>"
+done
+
+check "fix: keep human name
+
+Co-Authored-By: DeepSeek Developer <human@example.invalid>" "fix: keep human name
+
+Co-Authored-By: DeepSeek Developer <human@example.invalid>"
+
 "$here/install.sh" --uninstall --repo "$tmp" > /dev/null
 [ ! -f "$tmp/.git/hooks/commit-msg" ] && echo "ok   - uninstall" || { echo "FAIL - uninstall"; fail=1; }
 exit $fail

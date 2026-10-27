@@ -127,3 +127,11 @@ Real image and isolated Git-hook tests: `python scripts/test_docker.py`.
 <br/>
 
 <img src="assets/readme/footer-en.svg" alt="no-ai-coauthor" width="100%" />
+
+## OpenCode / DeepSeek
+
+The Git hook also runs when OpenCode or DeepSeek invokes `git commit`. It recognizes their
+attribution trailers and standalone generated footers; `test.sh` covers this through real commits.
+This project remains deprecated. For policies before tools execute, use
+[RepoRinse's native bridges](https://github.com/robgallardof/RepoRinse/blob/main/docs/integrations/opencode-deepseek.md).
+No agent configuration or model credential is required for the Git hook.

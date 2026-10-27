@@ -127,3 +127,11 @@ Pruebas de imagen y Git aislado: `python scripts/test_docker.py`.
 <br/>
 
 <img src="assets/readme/footer-es.svg" alt="no-ai-coauthor" width="100%" />
+
+## OpenCode / DeepSeek
+
+El hook de Git se ejecuta también cuando OpenCode o DeepSeek invocan `git commit`.
+Reconoce sus trailers y pies de atribución; `test.sh` lo comprueba mediante commits reales.
+Este proyecto sigue obsoleto: para bloqueos antes de herramientas, usa los
+[puentes nativos de RepoRinse](https://github.com/robgallardof/RepoRinse/blob/main/docs/integrations/opencode-deepseek.md).
+No se instala configuración del agente ni se requiere una clave de modelo.
