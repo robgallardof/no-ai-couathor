@@ -31,13 +31,10 @@
 
 </div>
 
-<p align="center"><img src="assets/readme/divider.svg" alt="" width="80%" /></p>
-
-
 OpenCode y DeepSeek también pueden usar el hook de Git. Para guardas antes de ejecutar herramientas, utiliza [RepoRinse](https://github.com/robgallardof/RepoRinse).
 
 <a id="-por-qué-cambiar"></a>
-<h2 align="center"><img src="assets/readme/sections/es-01.svg" alt="01 · ¿Por qué cambiar?" width="100%" /></h2>
+## <img src="assets/readme-builder/icons/layers.svg" width="24" height="24" alt="" /> ¿Por qué cambiar?
 
 | | no-ai-coauthor | RepoRinse |
 |---|:---:|:---:|
@@ -51,7 +48,7 @@ OpenCode y DeepSeek también pueden usar el hook de Git. Para guardas antes de e
 | Límites para Claude Code, Codex, Gemini CLI y Cursor | <img src="assets/readme-builder/icons/close.svg" width="20" height="20" alt="" /> | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> |
 
 <a id="-cámbiate-en-3-pasos"></a>
-<h2 align="center"><img src="assets/readme/sections/es-02.svg" alt="02 · Cámbiate en 3 pasos" width="100%" /></h2>
+## <img src="assets/readme-builder/icons/layers.svg" width="24" height="24" alt="" /> Cámbiate en 3 pasos
 
 **1. Quita el hook anterior** (desde tu clon de este repositorio):
 
@@ -76,8 +73,6 @@ reporinse install --provider git --scope user --only git.ai-attribution --yes   
 ¿Aún no quieres quitar el hook anterior? Una instalación de RepoRinse por repositorio lo mantiene funcionando: se
 encadena y corre primero. Todos los detalles, incluido qué es automático y qué es manual, están en la
 **[guía de migración](https://github.com/robgallardof/RepoRinse/blob/main/docs/migration/no-ai-couathor.md#español)**.
-
-<p align="center"><img src="assets/readme/divider.svg" alt="" width="80%" /></p>
 
 <details>
 <summary><b><img src="assets/readme-builder/icons/box.svg" width="20" height="20" alt="" /> Documentación anterior (no-ai-coauthor)</b></summary>
@@ -125,7 +120,7 @@ Usuario de ejecución, Compose y límites: [guía de Docker](docs/DOCKER.md) (en
 Pruebas de imagen y Git aislado: `python scripts/test_docker.py`.
 
 <a id="-licencia"></a>
-<h2 align="center"><img src="assets/readme/sections/es-03.svg" alt="03 · Licencia" width="100%" /></h2>
+## <img src="assets/readme-builder/icons/code.svg" width="24" height="24" alt="" /> Licencia
 
 [MIT](LICENSE)
 
@@ -134,5 +129,5 @@ Pruebas de imagen y Git aislado: `python scripts/test_docker.py`.
 <p align="center"><a href="#top">Volver al inicio</a></p>
 
 <!-- readme-builder:signature:start -->
-<p align="center"><a href="https://github.com/robgallardof"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/brand/signature-es-dark.svg" /><img src="assets/readme/brand/signature-es-light.svg" alt="no-ai-coauthor / Roberto Gallardo" width="100%" /></picture></a></p>
+<p align="center"><a href="https://github.com/robgallardof"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/brand/signature-es-dark.svg" /><img src="assets/readme/brand/signature-es-light.svg" alt="no-ai-coauthor / Roberto Gallardo" width="360" /></picture></a></p>
 <!-- readme-builder:signature:end -->
