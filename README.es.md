@@ -1,3 +1,5 @@
+<a id="top"></a>
+
 <div align="center">
 
 <picture>
@@ -31,22 +33,25 @@
 
 <p align="center"><img src="assets/readme/divider.svg" alt="" width="80%" /></p>
 
+
+OpenCode y DeepSeek también pueden usar el hook de Git. Para guardas antes de ejecutar herramientas, utiliza [RepoRinse](https://github.com/robgallardof/RepoRinse).
+
 <a id="-por-qué-cambiar"></a>
-<p align="center"><img src="assets/readme/sections/es-01.svg" alt="01 · ¿Por qué cambiar?" width="100%" /></p>
+<h2 align="center"><img src="assets/readme/sections/es-01.svg" alt="01 · ¿Por qué cambiar?" width="100%" /></h2>
 
 | | no-ai-coauthor | RepoRinse |
 |---|:---:|:---:|
-| Quita trailers `Co-Authored-By` de IA y pies "Generated with" | ✅ | ✅ |
-| Respeta coautores humanos — incluso personas llamadas *Claude* | ⚠️ regex | ✅ |
-| Convive con Husky / pre-commit / lefthook (encadena hooks existentes) | ❌ | ✅ |
-| Nunca reemplaza tu `core.hooksPath` global | ❌ | ✅ |
-| Desinstalación byte por byte con manifest | ❌ | ✅ |
-| Configurable (`.reporinse.toml`) y `--dry-run` en todo | ❌ | ✅ |
-| Revisión de espacios, Unicode invisible y tamaño de cambios | ❌ | ✅ |
-| Límites para Claude Code, Codex, Gemini CLI y Cursor | ❌ | ✅ |
+| Quita trailers `Co-Authored-By` de IA y pies "Generated with" | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> |
+| Respeta coautores humanos — incluso personas llamadas *Claude* | <img src="assets/readme-builder/icons/spark.svg" width="20" height="20" alt="" /> regex | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> |
+| Convive con Husky / pre-commit / lefthook (encadena hooks existentes) | <img src="assets/readme-builder/icons/close.svg" width="20" height="20" alt="" /> | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> |
+| Nunca reemplaza tu `core.hooksPath` global | <img src="assets/readme-builder/icons/close.svg" width="20" height="20" alt="" /> | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> |
+| Desinstalación byte por byte con manifest | <img src="assets/readme-builder/icons/close.svg" width="20" height="20" alt="" /> | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> |
+| Configurable (`.reporinse.toml`) y `--dry-run` en todo | <img src="assets/readme-builder/icons/close.svg" width="20" height="20" alt="" /> | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> |
+| Revisión de espacios, Unicode invisible y tamaño de cambios | <img src="assets/readme-builder/icons/close.svg" width="20" height="20" alt="" /> | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> |
+| Límites para Claude Code, Codex, Gemini CLI y Cursor | <img src="assets/readme-builder/icons/close.svg" width="20" height="20" alt="" /> | <img src="assets/readme-builder/icons/check.svg" width="20" height="20" alt="" /> |
 
 <a id="-cámbiate-en-3-pasos"></a>
-<p align="center"><img src="assets/readme/sections/es-02.svg" alt="02 · Cámbiate en 3 pasos" width="100%" /></p>
+<h2 align="center"><img src="assets/readme/sections/es-02.svg" alt="02 · Cámbiate en 3 pasos" width="100%" /></h2>
 
 **1. Quita el hook anterior** (desde tu clon de este repositorio):
 
@@ -75,7 +80,7 @@ encadena y corre primero. Todos los detalles, incluido qué es automático y qu�
 <p align="center"><img src="assets/readme/divider.svg" alt="" width="80%" /></p>
 
 <details>
-<summary><b>📦 Documentación anterior (no-ai-coauthor)</b></summary>
+<summary><b><img src="assets/readme-builder/icons/box.svg" width="20" height="20" alt="" /> Documentación anterior (no-ai-coauthor)</b></summary>
 
 ### Qué hacía
 
@@ -120,18 +125,14 @@ Usuario de ejecución, Compose y límites: [guía de Docker](docs/DOCKER.md) (en
 Pruebas de imagen y Git aislado: `python scripts/test_docker.py`.
 
 <a id="-licencia"></a>
-<p align="center"><img src="assets/readme/sections/es-03.svg" alt="03 · Licencia" width="100%" /></p>
+<h2 align="center"><img src="assets/readme/sections/es-03.svg" alt="03 · Licencia" width="100%" /></h2>
 
 [MIT](LICENSE)
 
 <br/>
 
-<img src="assets/readme/footer-es.svg" alt="no-ai-coauthor" width="100%" />
+<p align="center"><a href="#top">Volver al inicio</a></p>
 
-## OpenCode / DeepSeek
-
-El hook de Git se ejecuta también cuando OpenCode o DeepSeek invocan `git commit`.
-Reconoce sus trailers y pies de atribución; `test.sh` lo comprueba mediante commits reales.
-Este proyecto sigue obsoleto: para bloqueos antes de herramientas, usa los
-[puentes nativos de RepoRinse](https://github.com/robgallardof/RepoRinse/blob/main/docs/integrations/opencode-deepseek.md).
-No se instala configuración del agente ni se requiere una clave de modelo.
+<!-- readme-builder:signature:start -->
+<p align="center"><a href="https://github.com/robgallardof"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/brand/signature-es-dark.svg" /><img src="assets/readme/brand/signature-es-light.svg" alt="no-ai-coauthor / Roberto Gallardo" width="100%" /></picture></a></p>
+<!-- readme-builder:signature:end -->
